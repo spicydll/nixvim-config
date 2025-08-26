@@ -10,8 +10,8 @@ in
             lsp = {
                 enable = true;
                 servers = {
-                    nil-ls.enable = true;
-                    lua-ls.enable = true;
+                    nil_ls.enable = true;
+                    lua_ls.enable = true;
                     pylsp.enable = true;               
                     clangd.enable = true;
                 };

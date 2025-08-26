@@ -9,16 +9,22 @@
         plugins = {
             treesitter = {
                 enable = true;
-                ensureInstalled = [
-                    "nix"
-                    "lua"
-                    "vimdoc"
-                    "python"
-                    "c"
-                    "markdown"
-                    "markdown_inline"
-                    "bash"
-                ];
+                settings = {
+                    ensure_installed = [
+                        "nix"
+                        "lua"
+                        "vimdoc"
+                        "python"
+                        "c"
+                        "markdown"
+                        "markdown_inline"
+                        "bash"
+                    ];
+                    highlight = {
+                        enable = true;
+                        additional_vim_regex_highlighting = false;
+                    };
+                };
                 grammarPackages = with pkgs.vimPlugins.nvim-treesitter.builtGrammars; [
                     nix
                     lua
@@ -38,7 +44,7 @@
             guicursor = "";
 
             number = true;
-            relativeNumber = true;
+            relativenumber = true;
 
             tabstop = 4;
             softtabstop = 4;
@@ -64,5 +70,39 @@
 
             colorcolumn = "80";
         };
+        keymaps = [
+            {
+                key = "<leader>pv";
+                mode = [ "n" ];
+                action = "<Cmd>Ex<CR>";
+                options = {
+                    desc = "[p]roject [v]iew";
+                };
+            } 
+            {
+                key = "<leader>y";
+                mode = [ "n" "v" ];
+                action = "\"+y";
+                options = {
+                    desc = "[y]ank to clipboard";
+                };
+            } 
+            {
+                key = "<leader>p";
+                mode = [ "n" "v" ];
+                action = "\"+p";
+                options = {
+                    desc = "[p]aste from clipboard";
+                };
+            } 
+            {
+                key = "<leader>P";
+                mode = [ "n" "v" ];
+                action = "\"+P";
+                options = {
+                    desc = "[P]aste from clipboard";
+                };
+            } 
+        ];
     };
 }
