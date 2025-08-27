@@ -8,7 +8,7 @@ pkgs.mkShell {
 
         # C
         clang-tools
-        clangd
+        clang
         gcc
 
         # Go
