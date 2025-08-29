@@ -16,6 +16,23 @@ in
                     clangd.enable = true;
                 };
             };
+            cmp = {
+                enable = true;
+                autoEnableSources = true;
+                settings = {
+                    sources = [
+                        { name = "nvim_lsp"; }
+                        { name = "buffer"; }
+                        { name = "path"; }
+                        { name = "nvim_lua"; }
+                    ];
+                    mapping = {
+                        "<CR>" = "cmp.mapping.confirm({ select = true })";
+                        "<down>" = "cmp.mapping(cmp.mapping.select_next_item(), {'i', 's'})";
+                        "<up>" = "cmp.mapping(cmp.mapping.select_prev_item(), {'i', 's'})";
+                    }; 
+                };
+            };
         };
 
         keymaps = [
