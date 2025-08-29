@@ -27,10 +27,13 @@ in
                         { name = "nvim_lua"; }
                     ];
                     mapping = {
-                        "<CR>" = "cmp.mapping.confirm({ select = true })";
+                        "<CR>" = "cmp.mapping.confirm({ select = false })";
+                        "<Tab>" = "cmp.mapping(cmp.mapping.select_next_item(), {'i', 's'})";
+                        "<S-Tab>" = "cmp.mapping(cmp.mapping.select_prev_item(), {'i', 's'})";
                         "<down>" = "cmp.mapping(cmp.mapping.select_next_item(), {'i', 's'})";
                         "<up>" = "cmp.mapping(cmp.mapping.select_prev_item(), {'i', 's'})";
                     }; 
+                    preselect = "cmp.PreselectMode.None";
                 };
             };
         };
