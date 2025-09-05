@@ -75,6 +75,15 @@ in
                     remap = false;
                 };
             }
+            {
+                key = "<F2>";
+                mode = [ "n" ];
+                action = "<Cmd> lua vim.lsp.buf.rename()<CR>";
+                options = {
+                    desc = "Rename Symbol";
+                    remap = false;
+                };
+            }
         ];
 
         diagnostic.settings = {
