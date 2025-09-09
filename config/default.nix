@@ -19,6 +19,7 @@
                         "markdown"
                         "markdown_inline"
                         "bash"
+                        "zig"
                     ];
                     highlight = {
                         enable = true;
@@ -34,6 +35,7 @@
                     markdown
                     markdown-inline
                     bash
+                    zig
                 ];
                 nixGrammars = true;
                 nixvimInjections = true;

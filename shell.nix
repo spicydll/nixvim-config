@@ -14,6 +14,9 @@ pkgs.mkShell {
         # Go
         go
 
+        # Zig
+        zig
+
         # tools
         ripgrep
         git

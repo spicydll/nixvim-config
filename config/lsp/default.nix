@@ -14,6 +14,7 @@ in
                     lua_ls.enable = true;
                     pylsp.enable = true;               
                     clangd.enable = true;
+                    zls.enable = true;
                 };
             };
             cmp = {
