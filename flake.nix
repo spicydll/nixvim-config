@@ -2,8 +2,8 @@
     description = "spicydll's neovim config flake";
 
     inputs = {
-        nixpkgs.url = "github:nixos/nixpkgs/nixos-25.05";
-        nixvim.url = "github:nix-community/nixvim/nixos-25.05";
+        nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+        nixvim.url = "github:nix-community/nixvim/main";
         flake-utils.url = "github:numtide/flake-utils";
     };
     outputs = inputs@{ self, nixpkgs, nixvim, flake-utils, ... }:
